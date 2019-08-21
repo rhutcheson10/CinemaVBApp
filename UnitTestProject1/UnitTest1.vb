@@ -8,10 +8,10 @@ Imports CinemaVBApp
 
 
         Dim form1 As Form = New Form
-        Dim adult_before_5 = form1.Adult_Before_5(2, "Adult", False, 4)
+        Dim adult_before_5 = form1.Adult_Before_5(1, "Adult", False, 4)
 
 
-        Assert.AreEqual(29.0, adult_before_5)
+        Assert.AreEqual(14.5, adult_before_5)
 
 
 

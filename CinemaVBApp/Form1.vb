@@ -3,19 +3,13 @@
         Dim ticket_price = 14.5
         Dim total_price = ticket_price * quantity
 
-        If day = False Then 'False means that it does not fall on a tuesday 
+        'Day being False means that it does not fall on a tuesday 
+        If day = False And quantity > 0 And quantity <= 10 And person = "Adult" And time < 5 Then
 
-            If quantity > 0 And quantity <= 10 Then
-
-                If person = "Adult" Then
-                    If time < 5 Then
-                        Return total_price
-                    End If
-                End If
-
-            End If
+            Return total_price
 
         End If
+
 
     End Function
 
@@ -23,34 +17,25 @@
         Dim ticket_price = 17.5
         Dim total_price = ticket_price * quantity
 
-        If day = False Then 'False means that it does not fall on a tuesday 
+        'Day being False means that it does not fall on a tuesday 
+        If day = False And quantity > 0 And quantity <= 10 And person = "Adult" And time > 5 Then
 
-            If quantity > 0 And quantity <= 10 Then
+            Return total_price
 
-                If person = "Adult" Then
-                    If time > 5 Then
-                        Return total_price
-                    End If
-                End If
-
-            End If
 
         End If
+
 
     End Function
     Public Function Adult_Tuesday(quantity As Integer, person As String, day As String) As Int32
         Dim ticket_price = 13
         Dim total_price = ticket_price * quantity
 
-        If day = True Then 'True means that it falls on a tuesday 
+        'Day being True means that it falls on a tuesday 
+        If day And quantity > 0 And quantity <= 10 = True And person = "Adult" Then
 
-            If quantity > 0 And quantity <= 10 Then
 
-                If person = "Adult" Then
-                    Return total_price
-                End If
-
-            End If
+            Return total_price
 
         End If
 
@@ -60,40 +45,37 @@
         Dim ticket_price = 12
         Dim total_price = ticket_price * quantity
 
-        If quantity > 0 And quantity <= 10 Then
+        If quantity > 0 And quantity <= 10 And person = "Child" Then
 
-            If person = "Child" Then
-                Return total_price
-            End If
+            Return total_price
 
         End If
+
+
     End Function
 
     Public Function Senior(quantity As Integer, person As String) As Double
         Dim ticket_price = 12.5
         Dim total_price = ticket_price * quantity
 
-        If quantity > 0 And quantity <= 10 Then
+        If quantity > 0 And quantity <= 10 And person = "Senior" Then
 
-            If person = "Senior" Then
-                Return total_price
-            End If
+            Return total_price
 
         End If
+
     End Function
     Public Function Student(quantity As Integer, person As String, day As Boolean) As Int32
         Dim ticket_price = 14
         Dim total_price = ticket_price * quantity
 
-        If day = False Then 'False means that it does not fall on a tuesday 
-            If quantity > 0 And quantity <= 10 Then
+        ' Day being False means that it does not fall on a tuesday 
+        If day = False And quantity > 0 And quantity <= 10 And person = "Student" Then
 
-                If person = "Student" Then
-                    Return total_price
-                End If
-            End If
+            Return total_price
 
         End If
+
     End Function
     Public Function Family_Pass(quantity) As Integer
         Dim ticket_price = 46
@@ -113,11 +95,10 @@
         Dim ticket_price = 21.5
         Dim total_price = ticket_price * quantity
 
-        If quantity > 0 And quantity <= 10 Then
+        If quantity > 0 And quantity <= 10 And person = "Adult" Then
 
-            If person = "Adult" Then
-                Return total_price
-            End If
+            Return total_price
+
 
         End If
 
@@ -126,16 +107,11 @@
         Dim ticket_price = 12
         Dim total_price = ticket_price * quantity
 
-        If day = True Then 'True means that it falls on Wednesday
-            If holiday = False Then 'Not a holiday
+        'Day being True means that it falls on Wednesday
+        'Not a holiday is false beause it's assuming it's outside of holidays
+        If day = True And holiday = False And quantity > 0 And quantity <= 10 Then
 
-
-                If quantity > 0 And quantity <= 10 Then
-
-                    Return total_price
-
-                End If
-            End If
+            Return total_price
 
         End If
     End Function
